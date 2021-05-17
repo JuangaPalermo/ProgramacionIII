@@ -1,9 +1,9 @@
 <?php
 
 include_once 'mesa.php';
-include_once 'controllers\mesaAlta.php';
-include_once 'controllers\mesaListar.php';
-include_once 'controllers\mesaTraerPorID.php';
+include_once 'DAOs\mesaAlta.php';
+include_once 'DAOs\mesaListar.php';
+include_once 'DAOs\mesaTraerPorID.php';
 include_once 'validators\TraerMesaPorIDValidator.php';
 
 class mesaController extends mesa{

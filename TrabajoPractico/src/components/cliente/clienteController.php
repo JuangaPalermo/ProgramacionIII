@@ -1,9 +1,9 @@
 <?php
 
 include_once 'cliente.php';
-include_once 'controllers\clienteAlta.php';
-include_once 'controllers\clienteListar.php';
-include_once 'controllers\clienteTraerPorID.php';
+include_once 'DAOs\clienteAlta.php';
+include_once 'DAOs\clienteListar.php';
+include_once 'DAOs\clienteTraerPorID.php';
 
 class clienteController extends cliente
 {
@@ -19,19 +19,6 @@ class clienteController extends cliente
         $miCliente->setApellido($apellido);
         $miCliente->setEmail($email);
         $miCliente->setId(clienteAlta::InsertarClienteParametros($miCliente));
-
-        //imagenes
-            // $archivos = $request->getUploadedFiles();
-            // $destino="./fotos/";
-            // //var_dump($archivos);
-            // //var_dump($archivos['foto']);
-
-            // $nombreAnterior=$archivos['foto']->getClientFilename();
-            // $extension= explode(".", $nombreAnterior)  ;
-            // //var_dump($nombreAnterior);
-            // $extension=array_reverse($extension);
-
-            // $archivos['foto']->moveTo($destino.$titulo.".".$extension[0]);
             
         $response->getBody()->write("Cliente guardado.");
 
